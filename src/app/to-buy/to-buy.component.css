@@ -1,0 +1,10 @@
+.checked {
+  color: orange;
+}
+
+.ced{
+  margin-bottom: 4%;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer
+}

@@ -1,0 +1,28 @@
+.topbar_area {
+    height: 75px;
+}
+
+.main_body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.top_bar-area {
+    background: #244a8f;
+}
+
+.main_view {
+    padding: 0 15px 15px 15px;
+}
+
+.main {
+    margin-top: 100PX;
+}
+
+@media only screen and (max-width: 991px) {
+    .main_view {
+        padding: 0 15px 15px 15px;
+        margin-left: 0;
+        width: 100%;
+    }
+}

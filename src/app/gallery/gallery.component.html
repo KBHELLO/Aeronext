@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div style="text-align: center;padding: 62px"><h4>{{gallery}}</h4></div>
+  <!--<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12"
+         *ngFor="let image of images" style="margin-bottom: 4%;">
+      <div class="card" style="">
+        <img class="img-thumbnail" src="{{image['url']}}" alt="gallery-img"
+             style="max-width: 100%; height: auto">
+      </div>
+    </div>
+  </div>-->
+  <div class="row">
+    <div class="column" *ngFor="let image of images; let i = index">
+      <img class="img-thumbnail" src="{{image['url']}}" alt="gallery-img" data-toggle="modal"
+           data-target="#imgModal"
+           style="max-width: 100%; height: auto;cursor: pointer" (click)="getImage(i)">
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="padding: 0">
+        <img class="img-fluid" src="{{images[imageIndex]['url']}}" alt="gallery-img" id="myImg"
+             data-toggle="modal"
+             data-target="#imgModal"
+             style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
